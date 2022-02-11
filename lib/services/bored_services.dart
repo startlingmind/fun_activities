@@ -10,8 +10,8 @@ class BoredService {
   Future<BoredActivity> getBoredActivity() async {
     late http.Response response;
     try {
-      response =
-          await http.get(Uri.parse('https://www.boredapi.com/api/activity'));
+      response = await http.get(Uri.parse(
+          'https://www.boredapi.com/api/activity')); // base url + path components
     } catch (error) {
       if (kDebugMode) {
         print(error);
